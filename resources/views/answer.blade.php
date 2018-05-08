@@ -17,7 +17,7 @@
                         <a class="btn btn-primary float-right" href="{{ route('answers.edit',['question_id'=> $question, 'answer_id'=> $answer->id, ])}}">
                             Edit Answer
                         </a>
-                        <a class="btn btn-primary float-left" href="#">Like
+                        <a class="btn btn-primary float-left" href="{{ route('answers.like',['answer_id'=> $answer->id, ]) }}">Like
                         </a>
                         <a class="btn btn-danger float-left mr-2" value="submit" type="submit" id="submit" href="#">Dislike
                         </a>
