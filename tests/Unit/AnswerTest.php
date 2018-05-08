@@ -5,6 +5,7 @@ namespace Tests\Unit;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use App\Answer;
 
 class AnswerTest extends TestCase
 {
@@ -25,4 +26,13 @@ class AnswerTest extends TestCase
         $answer->question()->associate($question);
         $this->assertTrue($answer->save());
     }
+
+    public function testLike()
+    {   $answer = Answer::find(random_int(1,50));
+        $answer->like = '20';
+
+        $this->assertTrue($answer->save());
+    }
+
+
 }

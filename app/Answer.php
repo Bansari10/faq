@@ -26,6 +26,8 @@ use Illuminate\Database\Eloquent\Model;
 class Answer extends Model
 {
     protected $fillable = ['body'];
+    protected $changes = ['like','dislike'];
+
 
     public function user()
     {

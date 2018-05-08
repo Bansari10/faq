@@ -7,6 +7,7 @@ $factory->define(App\Answer::class, function (Faker $faker) {
     return [
         //
         'body' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),
-        'vote' => $faker->randomElement($array = array ('Like','Dislike')),
+        'like' => $faker->randomDigit,
+        'dislike' => $faker->randomDigit,
     ];
 });
