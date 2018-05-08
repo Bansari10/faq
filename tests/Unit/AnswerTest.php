@@ -34,5 +34,10 @@ class AnswerTest extends TestCase
         $this->assertTrue($answer->save());
     }
 
+    public function testCountCar()
+    {   $answer = Answer::find(random_int(1,50));
+        $likeCount = count($answer->like);
+        $this->assertInternalType("int",$likeCount);
+    }
 
 }
