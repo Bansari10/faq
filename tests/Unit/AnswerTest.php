@@ -34,7 +34,7 @@ class AnswerTest extends TestCase
         $this->assertTrue($answer->save());
     }
 
-    public function testCountCar()
+    public function testCountLike()
     {   $answer = Answer::find(random_int(1,50));
         $likeCount = count($answer->like);
         $this->assertInternalType("int",$likeCount);
@@ -45,6 +45,12 @@ class AnswerTest extends TestCase
         $answer->dislike = '15';
 
         $this->assertTrue($answer->save());
+    }
+
+    public function testCountDislike()
+    {   $answer = Answer::find(random_int(1,50));
+        $dislikeCount = count($answer->dislike);
+        $this->assertInternalType("int",$dislikeCount);
     }
 
 }
