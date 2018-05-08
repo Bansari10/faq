@@ -18,8 +18,7 @@ class CreateAnswersTable extends Migration
             $table->integer('user_id');
             $table->integer('question_id');
             $table->longText('body');
-            $table->integer('like');
-            $table->integer('dislike');
+            $table->string ('vote');
 
 
             $table->timestamps();
