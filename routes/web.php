@@ -30,6 +30,7 @@ Route::patch('/questions/{question_id}/answer/{answer_id}', 'AnswerController@up
 Route::delete('/questions/{question_id}/answer/{answer_id}', 'AnswerController@destroy')->name('answers.destroy');
 
 Route::get('/questions/{question_id}/answer/{answer_id}', 'AnswerController@like')->name('answers.like');
+//Route::get('/questions/{question_id}/answer/{answer_id}', 'AnswerController@dislike')->name('answers.dislike');
 
 
 Route::resources([

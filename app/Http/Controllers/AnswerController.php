@@ -111,4 +111,5 @@ class AnswerController extends Controller
         $answer->count($answer->like);
         return redirect()->route('questions.show',['question_id' => $question])->with('message', 'Liked');
     }
+
 }
