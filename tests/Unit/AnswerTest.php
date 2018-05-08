@@ -40,4 +40,11 @@ class AnswerTest extends TestCase
         $this->assertInternalType("int",$likeCount);
     }
 
+    public function testDisike()
+    {   $answer = Answer::find(random_int(1,50));
+        $answer->dislike = '15';
+
+        $this->assertTrue($answer->save());
+    }
+
 }
